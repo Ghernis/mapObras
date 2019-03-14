@@ -95,7 +95,7 @@ public class SidebarController implements Initializable {
     private Label lbY1111;
     public int contador=0;
     public ArrayList data;
-    public ArrayList resultados = new ArrayList();
+    public ArrayList resul = new ArrayList();
     public String [] ets;
     public ArrayList resuA = new ArrayList();
     public ArrayList resuB = new ArrayList();
@@ -2333,9 +2333,22 @@ ets[1460]="No Existe";
         
         escribirBinario es = new escribirBinario("bd.ext");
         data = es.leerData();
+//        escribirBinario es2 = new escribirBinario("bd4.ext");
+//        es2.escribirDataPartes(data,40,60);
+        int contCompara=0;
         try{
-            resultados = es.leerResultados();
-            System.out.println(resultados.size());
+            resul = es.leerResultados();
+//            System.out.println(resul.size());
+//            resultados r = (resultados)resul.get(resul.size()-1);
+            Iterator it = resul.iterator();
+            while(it.hasNext()){
+                resultados r = (resultados)it.next();
+                if(r.getContador()>contCompara){
+                    contCompara = r.getContador();
+                }
+            }
+            contador = contCompara+1;
+//            System.out.println(r.toString());
         }catch(Exception e){
             System.out.println("Exception: "+e);
         }
@@ -2492,9 +2505,9 @@ ets[1460]="No Existe";
         if(ubs.size()!=0){
             System.out.println(ubs.toString());
             rs = new resultados(contador,ubs);
-            resultados.add(rs);
+            resul.add(rs);
             escribirBinario es = new escribirBinario("rs.ext");
-            es.escribirResultados(resultados);
+            es.escribirResultados(resul);
 //            System.out.println(rs.toString()+" "+rs.getUb().get(0).toString());
         }
 //        

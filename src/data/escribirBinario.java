@@ -35,6 +35,24 @@ public class escribirBinario {
             System.out.println("Exception "+e);
         }
     }
+    public void escribirDataPartes(ArrayList inm,int partida,int fin){
+        List in = inm.subList(partida, fin);
+        try{
+            FileOutputStream fo = new FileOutputStream(path);
+    	    ObjectOutputStream os = new ObjectOutputStream(fo);
+            os.writeInt(in.size());
+            Iterator it = in.iterator();
+            while(it.hasNext()){
+                obras aux = (obras)it.next();
+                os.writeObject(aux);
+            }
+            os.close();
+    	    fo.close();
+            
+        }catch(Exception e){
+            System.out.println("Exception "+e);
+        }
+    }
      public void escribirResultados(ArrayList in){
         
         try{

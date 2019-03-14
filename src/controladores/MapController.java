@@ -124,6 +124,6 @@ public class MapController implements Initializable {
     private void setCanvas(Canvas canvas, Image img){
             GraphicsContext gc = canvas.getGraphicsContext2D();
             gc.drawImage(img,0,0,canvas.getWidth(),canvas.getHeight());
-        }
+    }
     
 }
