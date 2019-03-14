@@ -12,7 +12,7 @@
    <children>
       <JFXTabPane layoutX="111.0" layoutY="97.0" style="-fx-background-color: #6e7aa3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
-            <Tab text="NOA">
+            <Tab onSelectionChanged="#handleTabs" text="NOA">
               <content>
                 <AnchorPane fx:id="apNoa" minHeight="0.0" minWidth="0.0">
                      <children>
@@ -32,7 +32,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="NEA">
+            <Tab onSelectionChanged="#handleTabs" text="NEA">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
@@ -58,13 +58,13 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="TRANSBA">
+            <Tab onSelectionChanged="#handleTabs" text="TRANSBA">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane fx:id="transbaPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#handleClickTransba" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane fx:id="scrollTBA" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imgTBA" onMouseClicked="#handleClickTBA" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@imagenes/transbazoom.png" />
                                  </image>
@@ -75,7 +75,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="TRANSPA">
+            <Tab onSelectionChanged="#handleTabs" text="TRANSPA">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
@@ -101,7 +101,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="CUYO">
+            <Tab onSelectionChanged="#handleTabs" text="CUYO">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -118,7 +118,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="COMAHUE">
+            <Tab onSelectionChanged="#handleTabs" text="COMAHUE">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

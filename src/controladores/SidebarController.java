@@ -11,7 +11,7 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import static controladores.MainController.borderr;
 import static controladores.MapController.anchorNoa;
-import static controladores.MapController.mapNoa;
+import static controladores.MapController.anchorTBA;
 import data.escribirBinario;
 import data.leerCSV;
 import data.obras;
@@ -29,6 +29,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+import static controladores.MapController.mapContro;
 
 /**
  * FXML Controller class
@@ -2383,11 +2384,18 @@ ets[1460]="No Existe";
     private void handleA(ActionEvent event) {
 
         if(anchorNoa.getChildren().size()!=1){
-            lbX.setText(mapNoa.xt+"");
-            lbY.setText(mapNoa.yt+"");
+            lbX.setText(mapContro.xt+"");
+            lbY.setText(mapContro.yt+"");
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
+        }
+        if(anchorTBA.getChildren().size()!=1){
+            lbX.setText(mapContro.xt+"");
+            lbY.setText(mapContro.yt+"");
+            anchorTBA.getChildren().remove(1);
+            anchorTBA.getChildren().remove(1);
+            anchorTBA.getChildren().remove(1);
         }
         
     }
@@ -2395,8 +2403,8 @@ ets[1460]="No Existe";
     @FXML
     private void handleB(ActionEvent event) {
         if(anchorNoa.getChildren().size()!=1){
-            lbX1.setText(mapNoa.xt+"");
-            lbY1.setText(mapNoa.yt+"");
+            lbX1.setText(mapContro.xt+"");
+            lbY1.setText(mapContro.yt+"");
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
@@ -2406,8 +2414,8 @@ ets[1460]="No Existe";
     @FXML
     private void handleC(ActionEvent event) {
         if(anchorNoa.getChildren().size()!=1){
-            lbX11.setText(mapNoa.xt+"");
-            lbY11.setText(mapNoa.yt+"");
+            lbX11.setText(mapContro.xt+"");
+            lbY11.setText(mapContro.yt+"");
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
@@ -2417,8 +2425,8 @@ ets[1460]="No Existe";
     @FXML
     private void handleD(ActionEvent event) {
         if(anchorNoa.getChildren().size()!=1){
-            lbX111.setText(mapNoa.xt+"");
-            lbY111.setText(mapNoa.yt+"");
+            lbX111.setText(mapContro.xt+"");
+            lbY111.setText(mapContro.yt+"");
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
@@ -2428,8 +2436,8 @@ ets[1460]="No Existe";
     @FXML
     private void handleE(ActionEvent event) {
         if(anchorNoa.getChildren().size()!=1){
-            lbX1111.setText(mapNoa.xt+"");
-            lbY1111.setText(mapNoa.yt+"");
+            lbX1111.setText(mapContro.xt+"");
+            lbY1111.setText(mapContro.yt+"");
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
             anchorNoa.getChildren().remove(1);
