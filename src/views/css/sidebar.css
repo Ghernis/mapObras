@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 mar. 2019, 21:45:09
+    Author     : Gherni
+*/
+
+@font-face {
+
+	src: url('../css/Roboto-Regular.ttf');
+	
+}
+.label{
+    -fx-text-fill:-color-letra;
+    -fx-font-family: 'Roboto';
+}

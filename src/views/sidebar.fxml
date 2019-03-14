@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: #b2bece;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.SidebarController">
+   <children>
+      <VBox layoutX="150.0" layoutY="-14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lbTT" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label text="Ubicacion" />
+            <JFXTextArea fx:id="textUbicacion" prefHeight="50.0" style="-fx-background-color: #c6ced6;" wrapText="true" />
+            <Label text="Equipos" />
+            <JFXTextArea fx:id="textEquipos" prefHeight="200.0" style="-fx-background-color: #c6ced6;" wrapText="true" />
+            <Label text="Puntos" />
+            <HBox prefHeight="28.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="A - ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtA" onKeyReleased="#handleTxtA" promptText="Busqueda">
+                     <HBox.margin>
+                        <Insets left="-1.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="cbA" prefHeight="25.0" prefWidth="134.0" />
+                  <JFXButton fx:id="btnA" onAction="#handleA" style="-fx-background-color: #8e9dc5;" text="Guardar Punto" />
+                  <Label fx:id="lbX" text="Label" />
+                  <Label fx:id="lbY" text="Label" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="300.0" prefHeight="28.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="B - ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtB" onKeyReleased="#handleTxtB" promptText="Busqueda" />
+                  <JFXComboBox fx:id="cbB" prefHeight="25.0" prefWidth="134.0" />
+                  <JFXButton fx:id="btnB" onAction="#handleB" style="-fx-background-color: #8e9dc5;" text="Guardar Punto" />
+                  <Label fx:id="lbX1" text="Label" />
+                  <Label fx:id="lbY1" text="Label" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="328.0" prefHeight="28.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="C - ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtC" onKeyReleased="#handleTxtC" promptText="Busqueda" />
+                  <JFXComboBox fx:id="cbC" prefHeight="25.0" prefWidth="134.0" />
+                  <JFXButton fx:id="btnC" onAction="#handleC" style="-fx-background-color: #8e9dc5;" text="Guardar Punto" />
+                  <Label fx:id="lbX11" text="Label" />
+                  <Label fx:id="lbY11" text="Label" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="356.0" prefHeight="28.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="D - ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtD" onKeyReleased="#handleTxtD" promptText="Busqueda">
+                     <HBox.margin>
+                        <Insets left="-1.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="cbD" prefHeight="25.0" prefWidth="134.0" />
+                  <JFXButton fx:id="btnD" onAction="#handleD" style="-fx-background-color: #8e9dc5;" text="Guardar Punto" />
+                  <Label fx:id="lbX111" text="Label" />
+                  <Label fx:id="lbY111" text="Label" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="384.0" prefHeight="28.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="E - ">
+                     <HBox.margin>
+                        <Insets left="20.0" right="1.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtE" onKeyReleased="#handleTxtE" promptText="Busqueda" />
+                  <JFXComboBox fx:id="cbE" prefHeight="25.0" prefWidth="134.0" />
+                  <JFXButton fx:id="btnE" onAction="#handleE" style="-fx-background-color: #8e9dc5;" text="Guardar Punto" />
+                  <Label fx:id="lbX1111" text="Label" />
+                  <Label fx:id="lbY1111" text="Label" />
+               </children>
+            </HBox>
+            <Label text="." />
+            <JFXButton onAction="#handleSiguiente" style="-fx-background-color: #8e9dc5;" text="Siguiente" />
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox layoutX="420.0" layoutY="62.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="-20.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/logoSecre.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
